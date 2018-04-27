@@ -1,0 +1,16 @@
+table.data-table
+  thead
+    tr
+      th #
+      th Name
+      th Birthday
+      th Number
+      th Description
+  tbody
+    - @users.each_with_index do |user, index|
+      tr
+        td= user.id
+        td= user.name
+        td= user.birthday.strftime("%Y-%m-%d")
+        td= user.number
+        td= user.description
